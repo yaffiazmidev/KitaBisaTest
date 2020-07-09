@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="KitaBisaMovieDBTest" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="SyH-pj-8f0" id="J7E-jk-Nuq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SyH-pj-8f0">
+                    <rect key="frame" x="0.0" y="80" width="375" height="698"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fE-Hc-E69">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="3C8-in-Kxh">
+                            <rect key="frame" x="16" y="41.666666666666657" width="343" height="34.333333333333343"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kita Bisa Movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ri-GE-8cy">
+                                    <rect key="frame" x="0.0" y="0.0" width="252" height="34.333333333333336"/>
+                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbQ-w2-PQ2">
+                                    <rect key="frame" x="319" y="10.333333333333336" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="0Ak-5Z-txv"/>
+                                        <constraint firstAttribute="width" constant="24" id="Uaq-BF-lbM"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="heart.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="didClickFavoriteButton:" destination="-1" eventType="touchUpInside" id="YV5-A2-9xN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.142642349" green="0.58809113499999999" blue="0.9534975886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="3C8-in-Kxh" firstAttribute="leading" secondItem="2fE-Hc-E69" secondAttribute="leading" constant="16" id="7Ea-17-08c"/>
+                        <constraint firstAttribute="height" constant="80" id="EXP-It-8Zx"/>
+                        <constraint firstAttribute="trailing" secondItem="3C8-in-Kxh" secondAttribute="trailing" constant="16" id="QMH-4x-hRb"/>
+                        <constraint firstAttribute="bottom" secondItem="3C8-in-Kxh" secondAttribute="bottom" constant="4" id="Y2g-xX-yPm"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6o-AM-2ey">
+                    <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.142642349" green="0.58809113499999999" blue="0.9534975886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="t9r-I9-rpg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="Category">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickCategoryButton:" destination="-1" eventType="touchUpInside" id="Y8W-Yh-lUD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2fE-Hc-E69" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Xb-bL-owh"/>
+                <constraint firstItem="SyH-pj-8f0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3zr-Xi-wy6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2fE-Hc-E69" secondAttribute="trailing" id="8F3-ng-onP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G6o-AM-2ey" secondAttribute="trailing" id="8yU-HE-4fU"/>
+                <constraint firstItem="2fE-Hc-E69" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8zM-Fu-Ovc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SyH-pj-8f0" secondAttribute="trailing" id="Win-jo-2iQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SyH-pj-8f0" secondAttribute="bottom" id="fk5-qO-DmG"/>
+                <constraint firstItem="SyH-pj-8f0" firstAttribute="top" secondItem="2fE-Hc-E69" secondAttribute="bottom" id="itm-1z-fNh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G6o-AM-2ey" secondAttribute="bottom" id="r4X-EJ-LEl"/>
+                <constraint firstItem="G6o-AM-2ey" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xWg-cf-31p"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140" y="152.95566502463055"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>
